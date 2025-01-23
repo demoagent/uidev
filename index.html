@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    /* Apply styles directly here */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #121212; /* Dark background color */
+      color: #ffffff; /* White text for the body */
+      font-family: Arial, sans-serif; /* Default font */
+    }
+
+    df-messenger {
+      z-index: 999;
+      --df-messenger-font-color: #ffffff; /* White text inside the messenger */
+      --df-messenger-font-family: Google Sans, Arial, sans-serif;
+      --df-messenger-chat-background: #333333; /* Darker chat background */
+      --df-messenger-message-user-background: #1a73e8; /* Blue background for user messages */
+      --df-messenger-message-bot-background: #444444; /* Darker background for bot messages */
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+    }
+
+    /* Style the title bar using CSS variables */
+    df-messenger {
+      --df-messenger-titlebar-background-color: #333333; /* Dark background for title bar */
+      --df-messenger-titlebar-color: #ffffff; /* White text for title bar */
+    }
+  </style>
+</head>
+<body>
+  <df-messenger
+    project-id="genai-410716"
+    agent-id="0c579c22-5047-442f-8944-64686277d904"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat chat-title="Demo Agent Using HICOOL Manual Data">
+    </df-messenger-chat>
+  </df-messenger>
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+</body>
+</html>
