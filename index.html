@@ -13,7 +13,7 @@
       margin: 0;
       background-color: #121212; /* Dark background color */
       color: #ffffff; /* White text for the body */
-      font-family: 'Google Sans', Arial, sans-serif; /* Default font */
+      font-family: Arial, sans-serif; /* Default font */
     }
 
     df-messenger {
@@ -26,15 +26,11 @@
       --df-messenger-input-background: #222222; /* Dark background for input container */
       --df-messenger-input-font-color: #ffffff; /* White text color for user input */
       --df-messenger-send-icon-color: #ffffff; /* White color for the send icon */
-      --df-messenger-titlebar-background: #1a1a1a; /* Dark background for title bar */
-      --df-messenger-titlebar-font-color: #ffffff; /* White text for title bar */
+      --df-messenger-titlebar-background-color: #1a1a1a; /* Dark background for title bar */
+      --df-messenger-titlebar-color: #ffffff; /* White text for title bar */
       --df-messenger-chat-border-radius: 10px; /* Rounded corners for the chat dialog */
-      --df-messenger-chat-window-height: 100vh; /* Full height of the chat window */
-      --df-messenger-chat-window-width: 100vw; /* Full width of the chat window */
-      --df-messenger-chat-window-box-shadow: none; /* No box shadow */
-      --df-messenger-font-size: 14px; /* Default font size */
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
     }
 
     /* Additional custom styles */
@@ -56,8 +52,8 @@
     }
 
     df-messenger .title-bar {
-      background-color: var(--df-messenger-titlebar-background, #1a1a1a) !important; /* Dark background for title bar */
-      color: var(--df-messenger-titlebar-font-color, #ffffff) !important; /* White text for title bar */
+      background-color: var(--df-messenger-titlebar-background-color, #1a1a1a) !important; /* Dark background for title bar */
+      color: var(--df-messenger-titlebar-color, #ffffff) !important; /* White text for title bar */
     }
   </style>
 </head>
