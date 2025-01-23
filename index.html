@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo</title>
+  <title>Single-Page Chat UI</title>
   <style>
     body {
       display: flex;
@@ -13,22 +13,21 @@
       margin: 0;
       background-color: #121212; /* Dark background color */
       color: #ffffff; /* White text for the body */
-      font-family: Arial, sans-serif; /* Default font */
+      font-family: 'Google Sans', Arial, sans-serif; /* Default font */
     }
 
     df-messenger {
       z-index: 999;
+      --df-messenger-font-family: 'Google Sans', Arial, sans-serif;
       --df-messenger-font-color: #ffffff; /* White text inside the messenger */
-      --df-messenger-font-family: Google Sans, Arial, sans-serif;
       --df-messenger-chat-background: #333333; /* Darker chat background */
       --df-messenger-message-user-background: #1a73e8; /* Blue background for user messages */
       --df-messenger-message-bot-background: #444444; /* Darker background for bot messages */
       --df-messenger-input-background: #222222; /* Dark background for input container */
       --df-messenger-input-font-color: #ffffff; /* White text color for user input */
-      --df-messenger-input-box-background: #222222; /* Dark background for input box */
       --df-messenger-send-icon-color: #ffffff; /* White color for the send icon */
-      --df-messenger-titlebar-background-color: #1a1a1a; /* Dark background for title bar */
-      --df-messenger-titlebar-color: #ffffff; /* White text for title bar */
+      --df-messenger-titlebar-background: #1a1a1a; /* Dark background for title bar */
+      --df-messenger-titlebar-font-color: #ffffff; /* White text for title bar */
       --df-messenger-chat-border-radius: 10px; /* Rounded corners for the chat dialog */
       --df-messenger-chat-window-height: 500px; /* Height of the chat window */
       --df-messenger-chat-window-width: 350px; /* Width of the chat window */
@@ -44,7 +43,7 @@
     }
 
     df-messenger .input-container .input-box-wrapper input {
-      background-color: var(--df-messenger-input-box-background, #222222) !important; /* Dark background for user input box */
+      background-color: var(--df-messenger-input-background, #222222) !important; /* Dark background for user input box */
       color: var(--df-messenger-input-font-color, #ffffff) !important; /* White text color for user input */
     }
 
@@ -57,8 +56,8 @@
     }
 
     df-messenger .title-bar {
-      background-color: var(--df-messenger-titlebar-background-color, #1a1a1a) !important; /* Dark background for title bar */
-      color: var(--df-messenger-titlebar-color, #ffffff) !important; /* White text for title bar */
+      background-color: var(--df-messenger-titlebar-background, #1a1a1a) !important; /* Dark background for title bar */
+      color: var(--df-messenger-titlebar-font-color, #ffffff) !important; /* White text for title bar */
     }
   </style>
 </head>
@@ -69,7 +68,7 @@
     language-code="en"
     max-query-length="-1"
     chat-title="Demo Agent Using HICOOL Manual Data"
-    chat-title-icon="https://example.com/icon.png" <!-- Replace with your icon URL -->
+    placeholder-text="Type your message here...">
   </df-messenger>
 
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
