@@ -42,14 +42,22 @@
       background-color: var(--df-messenger-input-background, #222222) !important; /* Dark background for the input container */
       display: flex;
       justify-content: center; /* Center the input box horizontally */
+      padding: 10px; /* Optional: Add padding to the input container for better spacing */
+    }
+
+    df-messenger .input-container .input-box-wrapper {
+      width: 50%; /* Set width to 50% of the container */
+      display: flex;
+      align-items: center;
     }
 
     df-messenger .input-container .input-box-wrapper input {
       background-color: var(--df-messenger-input-background, #222222) !important; /* Dark background for user input box */
       color: var(--df-messenger-input-font-color, #ffffff) !important; /* White text color for user input */
       border: 2px solid #1a73e8 !important; /* Blue border for user input box */
-      width: 50% !important; /* Set width to 50% of the container */
+      width: 100%; /* Full width of the input box wrapper */
       padding: 10px !important; /* Adjust padding as needed */
+      box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
     }
 
     df-messenger .input-container .send-icon-wrapper {
