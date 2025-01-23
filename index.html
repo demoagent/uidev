@@ -26,9 +26,7 @@
       --df-messenger-message-bot-background: #444444; /* Darker background for bot messages */
       --df-messenger-input-background: #222222; /* Dark background for input container */
       --df-messenger-input-font-color: #ffffff; /* White text color for user input */
-      --df-messenger-send-icon-color: #ffffff; /* White text color for user input */
-      --df-messenger-input-box-color: #ffffff; /* White text color for user input */
-      --df-messenger-input-box-background: #1a73e8; /* White text color for user input */
+      --df-messenger-send-icon-color: #1a73e8; /* Blue color for the send icon */
       width: 100%; /* Full width */
       height: 100%; /* Full height */
     }
@@ -37,6 +35,25 @@
     df-messenger {
       --df-messenger-titlebar-background-color: #333333; /* Dark background for title bar */
       --df-messenger-titlebar-color: #ffffff; /* White text for title bar */
+    }
+
+    /* Additional custom styles for the input box and send icon */
+    df-messenger .input-container {
+      background-color: var(--df-messenger-input-background, #222222) !important; /* Dark background for the input container */
+    }
+
+    df-messenger .input-container .input-box-wrapper input {
+      background-color: var(--df-messenger-input-background, #222222) !important; /* Dark background for user input box */
+      color: var(--df-messenger-input-font-color, #ffffff) !important; /* White text color for user input */
+      border: 2px solid #1a73e8 !important; /* Blue border for user input box */
+    }
+
+    df-messenger .input-container .send-icon-wrapper {
+      background-color: var(--df-messenger-input-background, #222222) !important; /* Dark background for the send icon container */
+    }
+
+    df-messenger .input-container .send-icon-wrapper svg {
+      fill: var(--df-messenger-send-icon-color, #1a73e8) !important; /* Blue color for the send icon */
     }
   </style>
 </head>
