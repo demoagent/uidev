@@ -6,11 +6,19 @@
   <title>HealthNixa</title>
   <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
   <style>
+    /* Reset default margins and paddings */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling if not needed */
+    }
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 100vh; /* Use viewport height */
       background-color: #121212; /* Dark background for the whole page */
     }
 
@@ -24,12 +32,12 @@
       --df-messenger-input-placeholder-color: #bbbbbb; /* Light placeholder text color */
       --df-messenger-button-titlebar-color: #252525; /* Dark title bar */
       --df-messenger-send-icon-fill-color: #ffffff; /* White send icon */
-       --df-messenger-titlebar-background: #333333;
-       --df-messenger-titlebar-font-color: #ffffff;
+      --df-messenger-titlebar-background: #333333;
+      --df-messenger-titlebar-font-color: #ffffff;
       --df-messenger-input-background: #222222;
       --df-messenger-input-box-background: #222222;
-      width: 100%; /* Half the page horizontally */
-      height: 100%; /* Take full vertical height */
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -41,9 +49,7 @@
     language-code="en"
     max-query-length="-1"
     allow-feedback="all">
-    <df-messenger-chat
-      chat-title="HealthNixa">
-    </df-messenger-chat>
+    <df-messenger-chat chat-title="HealthNixa"></df-messenger-chat>
   </df-messenger>
 
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
