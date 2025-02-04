@@ -6,23 +6,20 @@
   <title>HealthNixa</title>
   <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css" />
   <style>
-    /* Reset default margins and paddings */
+    /* Reset defaults and prevent body scrolling */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      overflow: hidden; /* Prevent the body from scrolling */
     }
-
+    
+    /* Optional: Set a dark background for the whole page */
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #121212; /* Dark background for the whole page */
-      /* Use the dynamic viewport height calculated via JS */
-      height: calc(var(--vh, 1vh) * 100);
-      overflow-y: auto; /* Allow vertical scrolling if needed */
+      background-color: #121212;
     }
-
+    
+    /* Ensure the df-messenger takes up the full viewport and scrolls internally */
     df-messenger {
       z-index: 999;
       --df-messenger-font-color: #ffffff; /* Light font for better contrast */
@@ -37,8 +34,9 @@
       --df-messenger-titlebar-font-color: #ffffff;
       --df-messenger-input-background: #222222;
       --df-messenger-input-box-background: #222222;
-      width: 100%;
-      height: 100%;
+      width: 100vw;  /* Full viewport width */
+      height: 100vh; /* Full viewport height */
+      overflow: auto; /* Allow scrolling within the df-messenger if content overflows */
     }
   </style>
 </head>
@@ -54,16 +52,5 @@
   </df-messenger>
 
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-  <script>
-    // Dynamically calculate the viewport height and set a CSS variable
-    function setVh() {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    // Initial calculation
-    setVh();
-    // Update on resize (e.g., when mobile address bars show/hide)
-    window.addEventListener('resize', setVh);
-  </script>
 </body>
 </html>
