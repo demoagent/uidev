@@ -58,5 +58,28 @@
   </df-messenger>
 
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <script>
+    // Wait for the df-messenger element to load its shadow DOM
+    window.addEventListener('load', () => {
+      const dfMessenger = document.querySelector('df-messenger');
+      // Give it a short delay to ensure the shadow DOM is ready
+      setTimeout(() => {
+        if (dfMessenger && dfMessenger.shadowRoot) {
+          // Create a style element to override the send icon's fill color
+          const style = document.createElement('style');
+          style.textContent = `
+            /* The exact selectors might change if Google updates the widget.
+               This example attempts to target an SVG within the send button.
+            */
+            button[aria-label="Send"] svg, 
+            button[aria-label="Send"] svg path {
+              fill: #ffffff !important;
+            }
+          `;
+          dfMessenger.shadowRoot.appendChild(style);
+        }
+      }, 1000); // Adjust delay as necessary
+    });
+  </script>
 </body>
 </html>
