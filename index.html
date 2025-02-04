@@ -30,15 +30,26 @@
       --df-messenger-input-placeholder-color: #bbbbbb; /* Light placeholder text color */
       --df-messenger-button-titlebar-color: #252525; /* Dark title bar */
       --df-messenger-send-icon-fill-color: #ffffff; /* White send icon */
-      --df-messenger-titlebar-background: #1e1e1e#;
+      --df-messenger-titlebar-background: #1e1e1e; /* Corrected background without extra "#" */
       --df-messenger-titlebar-font-color: #ffffff;
       --df-messenger-titlebar-border: none;
       --df-messenger-titlebar-border-top: none;
       --df-messenger-input-background: #222222;
       --df-messenger-input-box-background: #222222;
+      
       width: 100vw;  /* Full viewport width */
       height: 100vh; /* Full viewport height */
-      overflow: auto; /* Allow scrolling within the df-messenger if content overflows */
+      overflow: auto; /* Allow internal scrolling for df-messenger content */
+      
+      /* Remove any outer borders or shadows */
+      border: none !important;
+      box-shadow: none !important;
+    }
+    
+    /* Attempt to remove borders/shadows from the chat window element */
+    df-messenger-chat {
+      border: none !important;
+      box-shadow: none !important;
     }
   </style>
 </head>
